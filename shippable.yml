@@ -5,13 +5,19 @@ language: node_js
 node_js:
   - 0.12
   - 0.10.25
-  #- 5
+  - 5
 
+#matrix:
+ # include:
+  #  - node_js: 5
+   #   env: tt@!=rr
+      
 build:
 
   ci:
     - ps -eax
     - ls -al
+    #- if [ "$SHIPPABLE_NODE_VERSION" == "5" ]; then foobar; fi`
     
 integrations:
   hub:
@@ -26,4 +32,4 @@ integrations:
       on_start: always
       on_success: always  
       on_failure: always  
-      on_pull_request: always
+      on_pull_request: always  
