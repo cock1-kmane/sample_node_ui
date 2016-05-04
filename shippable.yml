@@ -12,7 +12,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - sleep 5m
+   # - sleep 5m
     #PR
     
 integrations:
